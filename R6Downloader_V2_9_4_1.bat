@@ -1,7 +1,7 @@
 ::[Bat To Exe Converter]
 ::
 ::YAwzoRdxOk+EWAjk
-::fBw5plQjdCiDJGvS2W0UFDRYSDbUD1eIA7kZ6fv+0+iGth8YTOcDWo7P5YCBH8UL73rHepg702hOndkwPBRKahOpYgoIqmFPpm2JMvuvuwr4BEGK6Ss=
+::fBw5plQjdCuDJHCg335iF0JrHTiWOXiuOoUT+vz67eaCnk4SWfI2dIrn6byLOa4a6UqE
 ::YAwzuBVtJxjWCl3EqQJgSA==
 ::ZR4luwNxJguZRRnk
 ::Yhs/ulQjdF+5
@@ -14,8 +14,8 @@
 ::dAsiuh18IRvcCxnZtBJQ
 ::cRYluBh/LU+EWAnk
 ::YxY4rhs+aU+IeA==
-::cxY6rQJ7JhzQF1fEqQJiZkIaHkrSXA==
-::ZQ05rAF9IBncCkqN+0xwdVsGAl3MbiXqZg==
+::cxY6rQJ7JhzQF1fEqQJiZkIaGErTXA==
+::ZQ05rAF9IBncCkqN+0xwdVsGAl3MaCXrZg==
 ::ZQ05rAF9IAHYFVzEqQICfltwQxOMMGS7ArAOiA==
 ::eg0/rx1wNQPfEVWB+kM9LVsJDDbUfE+1EbsQ5+n/6vjn
 ::fBEirQZwNQPfEVWB+kM9LVsJDDbUfE+1EbsQ5+n/6vjn
@@ -26,12 +26,11 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wGk0UaAuVMme1B7EZ+og=
 ::Zg8zqx1/OA3MEVWAtB9wGk0UaAuVMme1B7EZ+og=
 ::dhA7pRFwIByZRRm2ogIUJwxaQAuDOG6oZg==
-::Zh4grVQjdCiDJGvS2W0UFDRYSDbUD1eIA7kZ6fv+0+iGth8YTOcDWo7P5YCBH8UL73rHepg702hOndkwPBRKahOpYgoIqmFPpm2JMvuu5SvuXUaF6Uo0HndLsTHv1RRpLtZwn6M=
+::Zh4grVQjdCuDJHCg335iF0JrHTiWOXiuOoUT+vz67eaCnk4SWfI2dIrn6OKqL/cd5krlcZM/6UwIp5IzWCQJMBeza28=
 ::YB416Ek+ZG8=
 ::
 ::
 ::978f952a14a936cc963da21a135fa983
-@shift /0
 @shift /0
 @echo off
 setlocal enableextensions
@@ -88,6 +87,7 @@ exit
 
 ::Get shits
   :7zipcheck
+    Title Downloading needed stuffs
     MODE 62,50
     if exist "Resources\7z.exe" (
       goto DepotCheck
@@ -176,16 +176,17 @@ exit
 :foridiots
 Title Rainbow Six Siege Downloader
 cls
-MODE 87,10
+MODE 87,11
 echo [1m[101mÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ?
 echo 3 If you come across a problem/issue, or have a question,                             3
 echo 3 PLEASE read the FAQ and Guide section before asking for help in our discord server. 3
 echo 3 Your problem can most likely be resolved by reading the FAQ and Guide.              3
+echo 3          Please read #quides-and-faq in Throwback, and read here too.               3
 echo AÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄU[0m
 echo.
 timeout /T 10 >nul | echo 			Please wait 10 sec to continue^!
-Resources\cmdMenuSel f870 "                                    Continue" ""
-if %ERRORLEVEL% == 1 goto guidefaq
+Resources\cmdMenuSel f870 "                                    Continue"
+if %ERRORLEVEL% == 1 goto faq
 
 
 
@@ -475,6 +476,7 @@ MODE 120,20
 Title Downloading Crimson Heist...
 echo THIS version using CPlay^!
 echo Make sure you starting RainbowSix.bat not the normal RainbowSix.exe^!
+echo To continue downloading press any key
 pause
 echo [1m[93m
 dotnet Resources\DepotDownloader.dll -app 359550 -depot 377237 -manifest 7890853311380514304 -username %username% -remember-password -dir "Downloads\Y6S1_ToyRainbow"  -validate -max-servers 15 -max-downloads 10
@@ -491,8 +493,10 @@ echo Make sure you starting RainbowSix.bat not the normal RainbowSix.exe^!
 echo This version using After chanka update ^!
 echo Nest Destruction event!
 echo Y6S2_NorthStar ^=^> Y6S2_NestDestruction
+echo To continue downloading press any key
 if exist "Downloads\Y6S2_NorthStar" (
 	echo Older version of North Star ^! Please delete it^!
+	echo To continue downloading press any key
 	pause
 )
 echo [1m[93m
@@ -507,6 +511,7 @@ MODE 120,20
 Title Downloading Crystal Guard...
 echo THIS version using UPCR1^!
 echo Make sure you starting RainbowSix.bat not the normal RainbowSix.exe^!
+echo To continue downloading press any key
 pause
 echo [1m[93m
 dotnet Resources\DepotDownloader.dll -app 359550 -depot 377237 -manifest 4859695099882698284 -username %username% -remember-password -dir "Downloads\Y6S3_CrystalGuard"  -validate -max-servers 15 -max-downloads 10
@@ -1246,7 +1251,7 @@ dotnet Resources\DepotDownloader.dll -app 359550 -depot 377238 -manifest 4020038
 pause
 goto downloadcomplete
 
-:neondawn
+:rusneondawn
 MODE 120,20
 Title Downloading Sku RUS For Neon Dawn...
 echo [1m[93m
@@ -1254,36 +1259,42 @@ dotnet Resources\DepotDownloader.dll -app 359550 -depot 377238 -manifest 3560446
 pause
 goto downloadcomplete
 
-:crimsonheist
+:ruscrimsonheist
+Title Downloading Sku RUS For Crimson Heist...
 MODE 120,20
 dotnet Resources\DepotDownloader.dll -app 359550 -depot 377238 -manifest 6130917224459224462 -username %username% -remember-password -dir "Downloads\Y6S1_ToyRainbow" -validate -max-servers 15 -max-downloads 10 [0m
 pause
 goto downloadcomplete
 
-:northstar
+:rusnorthstar
+Title Downloading Sku RUS For North Star...
 MODE 120,20
 dotnet Resources\DepotDownloader.dll -app 359550 -depot 377238 -manifest 6767916709017546201 -username %username% -remember-password -dir "Downloads\Y6S2_NestDestruction" -validate -max-servers 15 -max-downloads 10 [0m
 pause
 goto downloadcomplete
 
 :ruscrystalguard
+Title Downloading Sku RUS For Crystal Guard...
 MODE 120,20
 dotnet Resources\DepotDownloader.dll -app 359550 -depot 377238 -manifest 5161489294178683219 -username %username% -remember-password -dir "Downloads\Y6S3_CrystalGuard" -validate -max-servers 15 -max-downloads 10 [0m
 pause
 goto downloadcomplete
 
 :rushighcalibre
+Title Downloading Sku RUS For High Calibre...
 MODE 120,20
 dotnet Resources\DepotDownloader.dll -app 359550 -depot 377238 -manifest 5061986605226254108 -username %username% -remember-password -dir "Downloads\Y6S4_HighCalibre" -validate -max-servers 15 -max-downloads 10 [0m
 pause
 goto downloadcomplete
 
 :downloadcomplete
-MODE 70,6
+MODE 70,8
 Title Download Complete
 cls
 echo [0m[7mÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ?
 echo 3                         Download Complete!                         3
+echo 3    If you used RUS, please download the game on Game Downloader    3
+echo 3  Verify mean just select the same season and dont delete anything  3
 echo AÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄU[0m
 echo.
 Resources\cmdMenuSel f870 "                               Continue"
