@@ -51,7 +51,7 @@ ECHO %cd% | FIND /C "OneDrive" >NUL
 IF ERRORLEVEL 1 (
 goto dotnetcheck
 ) ELSE (
-echo You ran this downloader in a Onedrive folder, move the downloader to a different location. If you can't figure out how to move it follow this: https://shorturl.at/qk3SX
+echo You ran the downloader in a OneDrive folder, move the downloader to a different location. If you can't figure out how to move it follow this: https://shorturl.at/qk3SX
 pause
 exit
 )
