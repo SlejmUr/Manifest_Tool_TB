@@ -51,7 +51,7 @@ ECHO %cd% | FIND /C "OneDrive" >NUL
 IF ERRORLEVEL 1 (
 goto dotnetcheck
 ) ELSE (
-echo You run this script in OneDrive. Please move out this file.
+echo You ran the downloader in a OneDrive folder, move the downloader to a different location. If you can't figure out how to move it follow this: https://shorturl.at/qk3SX
 pause
 exit
 )
