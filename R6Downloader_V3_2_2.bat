@@ -61,11 +61,11 @@ exit
 
 :dotnetcheck
 Title Downloading .NET Core SDK...
-MODE 67,5
+MODE 100,50
 if exist "C:\Program Files\dotnet\dotnet.exe" (
 goto dotnetchecktwo
 ) else (
-  start https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-8.0.200-windows-x64-installer
+  start https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-8.0.400-windows-x64-installer
   cls
   echo Download the .NET Core SDK installer and restart the downloader.
   echo.
@@ -76,10 +76,9 @@ goto dotnetchecktwo
 
 ::dotnet checker 2
 :dotnetchecktwo
-if exist "C:\Program Files\dotnet\sdk\8.0.200\dotnet.dll" (
-goto 7zipcheck
-) else (
-  start https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-8.0.200-windows-x64-installer
+dotnet --version | findstr /C:"8.0"
+if errorlevel 1 (
+  start https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-8.0.400-windows-x64-installer
   cls
   echo Could not find .NET 8 SDK, please download it and restart the downloader. Help posts will be deleted about this issue.
   dotnet --version
@@ -88,7 +87,9 @@ goto 7zipcheck
   echo Press any key to close the downloader. . .
   pause >nul
   exit
-  )
+) ELSE (
+  goto 7zipcheck
+)
 
 ::Get shits
   :7zipcheck
